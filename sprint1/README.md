@@ -3,9 +3,8 @@
 Kampüs içindeki seminer, atölye ve söyleşilerin listelendiği, detaylarının görüntülendiği
 ve yeni etkinlik eklenip güncellenebildiği web uygulamasının **HTML iskeleti**.
 
-- **Öğrenci:** Ad Soyad — 20xxxxxxx
+- **Öğrenci:** Kutay Karabulut — 2321032056
 - **Ders:** Web Teknolojileri ve Programlama, Sprint 1 (HTML ve Git)
-- **Canlı adres:** [https://kampus-etkinlik-navy.vercel.app](https://kampus-etkinlik-navy.vercel.app)
 
 ## Bu sprintte tamamlanan sayfalar
 
