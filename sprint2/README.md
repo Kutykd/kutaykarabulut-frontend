@@ -4,7 +4,7 @@ Sprint 1'deki HTML iskeletine CSS giydirildi: telefonda ve masaüstünde rahat k
 
 - **Öğrenci:** Kutay Karabulut — 2321032056
 - **Ders:** Web Teknolojileri ve Programlama, Sprint 2 (CSS ve Responsive)
-- **Stil dosyası:** `sprint2/css/numaran.css` (beş sayfaya da bağlı)
+- **Stil dosyası:** `sprint2/css/2321032056.css` (beş sayfaya da bağlı)
 
 ## Bu sprintte yapılanlar
 
