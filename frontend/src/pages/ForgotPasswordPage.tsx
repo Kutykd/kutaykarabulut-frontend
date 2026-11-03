@@ -37,7 +37,7 @@ function ForgotPasswordPage() {
         </p>
       </form>
 
-      <p className="form-baglantilar">
+      <p className="form-butonlar">
         <Link to="/login">&larr; Girişe dön</Link>
       </p>
     </>

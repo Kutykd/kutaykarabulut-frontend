@@ -83,7 +83,7 @@ function RegisterPage() {
         </p>
       </form>
 
-      <p className="form-baglantilar">
+      <p className="form-butonlar">
         <Link to="/login">Zaten hesabın var mı? Giriş yap</Link>
       </p>
     </>

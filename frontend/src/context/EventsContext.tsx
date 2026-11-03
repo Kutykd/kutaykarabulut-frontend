@@ -49,6 +49,6 @@ export function EventsProvider({ children }: { children: ReactNode }) {
 
 export function useEvents() {
   const value = useContext(EventsContext);
-  if (value === null) throw new Error("useEvents, EventsProvider içinde kullanılmalı.");
+  if (value === null) throw new Error("Provider yok");
   return value;
 }

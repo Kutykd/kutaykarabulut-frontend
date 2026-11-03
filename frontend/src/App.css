@@ -466,13 +466,6 @@ footer {
   border-color: var(--renk-hata);
 }
 
-.form-baglantilar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--bosluk-m);
-  margin-top: var(--bosluk-m);
-}
-
 /* telefonda tablo satırları kart gibi alt alta */
 @media (max-width: 699px) {
   .tablo thead {

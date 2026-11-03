@@ -55,7 +55,7 @@ function LoginPage() {
         </p>
       </form>
 
-      <p className="form-baglantilar">
+      <p className="form-butonlar">
         <Link to="/forgot-password">Şifremi unuttum</Link>
         <Link to="/register">Hesabın yok mu? Kayıt ol</Link>
       </p>
