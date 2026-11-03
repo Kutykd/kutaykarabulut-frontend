@@ -435,3 +435,71 @@ footer {
     grid-template-columns: 2fr 1fr;
   }
 }
+
+/* ===== 10. Sprint 6: yönetim tablosu ve giriş formları ===== */
+.tablo {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--renk-kart);
+}
+
+.tablo th,
+.tablo td {
+  text-align: left;
+  padding: var(--bosluk-s) var(--bosluk-m);
+  border-bottom: 1px solid var(--renk-kenar);
+}
+
+.tablo th {
+  background: var(--renk-ana);
+  color: var(--renk-baslik-yazi);
+}
+
+.islemler {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--bosluk-s);
+}
+
+.buton-sil {
+  background: var(--renk-hata);
+  border-color: var(--renk-hata);
+}
+
+.form-baglantilar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--bosluk-m);
+  margin-top: var(--bosluk-m);
+}
+
+/* telefonda tablo satırları kart gibi alt alta */
+@media (max-width: 699px) {
+  .tablo thead {
+    display: none;
+  }
+
+  .tablo tr {
+    display: block;
+    border: 1px solid var(--renk-kenar);
+    border-radius: var(--kose);
+    margin-bottom: var(--bosluk-m);
+    padding: var(--bosluk-s);
+  }
+
+  .tablo td {
+    display: block;
+    border: 0;
+    padding: 4px var(--bosluk-s);
+  }
+
+  .tablo td.islemler {
+    display: flex;
+    margin-top: var(--bosluk-s);
+  }
+
+  .tablo td[data-baslik]::before {
+    content: attr(data-baslik) ": ";
+    font-weight: bold;
+  }
+}

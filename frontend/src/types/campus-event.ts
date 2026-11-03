@@ -12,3 +12,14 @@ export interface CampusEvent {
   description: string;
   image?: string;
 }
+
+// Formdaki alanlar; kutular metin tuttuğu için hepsi string.
+export interface EventFormValues {
+  title: string;
+  category: Category | "";
+  date: string;
+  time: string;
+  location: string;
+  capacity: string;
+  description: string;
+}
