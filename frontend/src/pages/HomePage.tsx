@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useEvents } from "../context/useEvents";
+import { useEvents } from "../context/EventsContext";
 import EventList from "../components/events/EventList";
 
 function HomePage() {

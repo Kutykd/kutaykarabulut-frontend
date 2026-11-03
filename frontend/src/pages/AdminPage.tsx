@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useEvents } from "../context/useEvents";
+import { useEvents } from "../context/EventsContext";
 import { formatDate } from "../utils/format-date";
 
 function AdminPage() {
@@ -11,6 +11,7 @@ function AdminPage() {
 
   return (
     <>
+      <h2 className="bolum-baslik">Etkinlik Yönetimi</h2>
       <p>
         <Link className="buton" to="/admin/new">
           + Yeni etkinlik

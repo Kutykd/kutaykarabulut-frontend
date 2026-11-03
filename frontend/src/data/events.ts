@@ -21,8 +21,7 @@ export const events: CampusEvent[] = [
     time: "10:00",
     location: "Bilgisayar Laboratuvarı 2",
     description: "Arduino ile çizgi izleyen robot yapımı, başlangıç seviyesi.",
-    capacity: 20,
-    image: "/afis.svg"
+    capacity: 20
   },
   {
     id: "event-3",
@@ -32,8 +31,7 @@ export const events: CampusEvent[] = [
     time: "13:00",
     location: "B Blok Amfi 1",
     description: "Sektörden bir uzmanla güvenlik kariyeri üzerine sohbet.",
-    capacity: 50,
-    image: "/afis.svg"
+    capacity: 50
   },
   {
     id: "event-4",
@@ -43,8 +41,7 @@ export const events: CampusEvent[] = [
     time: "15:00",
     location: "Bilgisayar Laboratuvarı 1",
     description: "HTML ve CSS ile ilk kişisel sayfanı yap.",
-    capacity: 30,
-    image: "/afis.svg"
+    capacity: 30
   },
   {
     id: "event-5",
@@ -54,8 +51,7 @@ export const events: CampusEvent[] = [
     time: "09:30",
     location: "Kütüphane Etkinlik Alanı",
     description: "Üç kişilik takımlarla dört saatlik algoritma yarışması.",
-    capacity: 10,
-    image: "/afis.svg"
+    capacity: 10
   },
   {
     id: "event-6",
@@ -65,7 +61,6 @@ export const events: CampusEvent[] = [
     time: "14:30",
     location: "A Blok Konferans Salonu",
     description: "Büyük dil modelleri nasıl çalışır? Temel kavramlar ve örnekler.",
-    capacity: 50,
-    image: "/afis.svg"
+    capacity: 50
   }
 ];

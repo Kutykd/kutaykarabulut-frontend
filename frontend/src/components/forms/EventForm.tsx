@@ -1,29 +1,29 @@
 import { useState, type ChangeEvent, type FormEvent } from "react";
-import type { Category, EventFormValues } from "../../types/campus-event";
-import { validateEvent, type FormErrors } from "../../utils/validate";
+import type { Category, EventFormData, EventFormErrors } from "../../types/campus-event";
+import { validateEvent } from "../../utils/validate-event";
 
 const categories: Category[] = ["Seminer", "Atölye", "Söyleşi", "Yarışma"];
 
 interface EventFormProps {
-  initialValues: EventFormValues;
+  initialData: EventFormData;
   submitText: string;
-  onSubmit: (values: EventFormValues) => void;
+  onSubmit: (data: EventFormData) => void;
 }
 
 // Ekle ve Güncelle aynı formu kullanır; kaydetmek sayfanın işi.
-function EventForm({ initialValues, submitText, onSubmit }: EventFormProps) {
-  const [values, setValues] = useState(initialValues);
-  const [errors, setErrors] = useState<FormErrors>({});
+function EventForm({ initialData, submitText, onSubmit }: EventFormProps) {
+  const [data, setData] = useState<EventFormData>(initialData);
+  const [errors, setErrors] = useState<EventFormErrors>({});
 
   function handleChange(e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) {
-    setValues({ ...values, [e.target.name]: e.target.value });
+    setData({ ...data, [e.target.name]: e.target.value });
   }
 
-  function handleSubmit(e: FormEvent) {
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const found = validateEvent(values);
+    const found = validateEvent(data);
     setErrors(found);
-    if (Object.keys(found).length === 0) onSubmit(values);
+    if (Object.keys(found).length === 0) onSubmit(data);
   }
 
   return (
@@ -36,7 +36,7 @@ function EventForm({ initialValues, submitText, onSubmit }: EventFormProps) {
           name="title"
           maxLength={80}
           placeholder="Örn. Kariyer Günleri 2026"
-          value={values.title}
+          value={data.title}
           onChange={handleChange}
           aria-invalid={errors.title ? true : undefined}
         />
@@ -48,7 +48,7 @@ function EventForm({ initialValues, submitText, onSubmit }: EventFormProps) {
         <select
           id="category"
           name="category"
-          value={values.category}
+          value={data.category}
           onChange={handleChange}
           aria-invalid={errors.category ? true : undefined}
         >
@@ -68,7 +68,7 @@ function EventForm({ initialValues, submitText, onSubmit }: EventFormProps) {
           type="date"
           id="date"
           name="date"
-          value={values.date}
+          value={data.date}
           onChange={handleChange}
           aria-invalid={errors.date ? true : undefined}
         />
@@ -81,7 +81,7 @@ function EventForm({ initialValues, submitText, onSubmit }: EventFormProps) {
           type="time"
           id="time"
           name="time"
-          value={values.time}
+          value={data.time}
           onChange={handleChange}
           aria-invalid={errors.time ? true : undefined}
         />
@@ -96,7 +96,7 @@ function EventForm({ initialValues, submitText, onSubmit }: EventFormProps) {
           name="location"
           maxLength={80}
           placeholder="Örn. A Blok Konferans Salonu"
-          value={values.location}
+          value={data.location}
           onChange={handleChange}
           aria-invalid={errors.location ? true : undefined}
         />
@@ -111,7 +111,7 @@ function EventForm({ initialValues, submitText, onSubmit }: EventFormProps) {
           name="capacity"
           min={1}
           max={1000}
-          value={values.capacity}
+          value={data.capacity}
           onChange={handleChange}
           aria-invalid={errors.capacity ? true : undefined}
         />
@@ -124,7 +124,7 @@ function EventForm({ initialValues, submitText, onSubmit }: EventFormProps) {
           id="description"
           name="description"
           rows={5}
-          value={values.description}
+          value={data.description}
           onChange={handleChange}
           aria-invalid={errors.description ? true : undefined}
         />

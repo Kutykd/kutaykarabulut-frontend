@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { Category } from "../types/campus-event";
-import { useEvents } from "../context/useEvents";
+import { useEvents } from "../context/EventsContext";
 import { filterByCategory, searchEvents } from "../utils/filter-events";
 import EventFilter from "../components/events/EventFilter";
 import EventList from "../components/events/EventList";
@@ -15,6 +15,7 @@ function EventsPage() {
 
   return (
     <>
+      <h2 className="bolum-baslik">Tüm Etkinlikler</h2>
       <EventFilter
         searchText={searchText}
         category={category}

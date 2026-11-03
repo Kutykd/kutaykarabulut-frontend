@@ -1,17 +1,20 @@
 import { useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
-import { isEmail, type FormErrors } from "../utils/validate";
+interface LoginErrors {
+  email?: string;
+  password?: string;
+}
 
 function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [errors, setErrors] = useState<FormErrors>({});
+  const [errors, setErrors] = useState<LoginErrors>({});
   const [sent, setSent] = useState(false);
 
-  function handleSubmit(e: FormEvent) {
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const found: FormErrors = {};
-    if (!isEmail(email)) found.email = "Geçerli bir e-posta girin.";
+    const found: LoginErrors = {};
+    if (!email.includes("@")) found.email = "Geçerli bir e-posta girin.";
     if (password.length < 6) found.password = "Şifre en az 6 karakter olmalı.";
     setErrors(found);
     setSent(Object.keys(found).length === 0);
@@ -19,7 +22,8 @@ function LoginPage() {
 
   return (
     <>
-      {sent && <p className="mesaj mesaj-basari">Form geçerli. Gerçek giriş sonraki sprintlerde eklenecek.</p>}
+      <h2 className="bolum-baslik">Giriş Yap</h2>
+      {sent && <p className="mesaj mesaj-basari">Form geçerli. Gerçek giriş Sprint 10'da eklenecek.</p>}
 
       <form className="form" noValidate onSubmit={handleSubmit}>
         <p className="alan">

@@ -1,20 +1,25 @@
 import { useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
-import { isEmail, type FormErrors } from "../utils/validate";
+interface RegisterErrors {
+  name?: string;
+  email?: string;
+  password?: string;
+  password2?: string;
+}
 
 function RegisterPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [password2, setPassword2] = useState("");
-  const [errors, setErrors] = useState<FormErrors>({});
+  const [errors, setErrors] = useState<RegisterErrors>({});
   const [sent, setSent] = useState(false);
 
-  function handleSubmit(e: FormEvent) {
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const found: FormErrors = {};
+    const found: RegisterErrors = {};
     if (name.trim().length < 3) found.name = "Ad soyad en az 3 karakter olmalı.";
-    if (!isEmail(email)) found.email = "Geçerli bir e-posta girin.";
+    if (!email.includes("@")) found.email = "Geçerli bir e-posta girin.";
     if (password.length < 6) found.password = "Şifre en az 6 karakter olmalı.";
     if (password2 !== password) found.password2 = "Şifreler aynı değil.";
     setErrors(found);
@@ -23,7 +28,8 @@ function RegisterPage() {
 
   return (
     <>
-      {sent && <p className="mesaj mesaj-basari">Form geçerli. Gerçek kayıt sonraki sprintlerde eklenecek.</p>}
+      <h2 className="bolum-baslik">Kayıt Ol</h2>
+      {sent && <p className="mesaj mesaj-basari">Form geçerli. Gerçek kayıt Sprint 10'da eklenecek.</p>}
 
       <form className="form" noValidate onSubmit={handleSubmit}>
         <p className="alan">

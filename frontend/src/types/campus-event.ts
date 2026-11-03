@@ -14,7 +14,7 @@ export interface CampusEvent {
 }
 
 // Formdaki alanlar; kutular metin tuttuğu için hepsi string.
-export interface EventFormValues {
+export interface EventFormData {
   title: string;
   category: Category | "";
   date: string;
@@ -23,3 +23,6 @@ export interface EventFormValues {
   capacity: string;
   description: string;
 }
+
+// Her alana en fazla bir hata mesajı.
+export type EventFormErrors = Partial<Record<keyof EventFormData, string>>;

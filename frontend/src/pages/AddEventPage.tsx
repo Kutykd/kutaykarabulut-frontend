@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom";
-import type { EventFormValues } from "../types/campus-event";
-import { useEvents } from "../context/useEvents";
+import type { EventFormData } from "../types/campus-event";
+import { useEvents } from "../context/EventsContext";
 import EventForm from "../components/forms/EventForm";
 
-const emptyForm: EventFormValues = {
+const emptyForm: EventFormData = {
   title: "",
   category: "",
   date: "",
@@ -18,14 +18,17 @@ function AddEventPage() {
   const navigate = useNavigate();
 
   return (
-    <EventForm
-      initialValues={emptyForm}
-      submitText="Kaydet"
-      onSubmit={(values) => {
-        addEvent(values);
-        navigate("/admin");
-      }}
-    />
+    <>
+      <h2 className="bolum-baslik">Etkinlik Ekle</h2>
+      <EventForm
+        initialData={emptyForm}
+        submitText="Kaydet"
+        onSubmit={(data) => {
+          addEvent(data);
+          navigate("/admin");
+        }}
+      />
+    </>
   );
 }
 

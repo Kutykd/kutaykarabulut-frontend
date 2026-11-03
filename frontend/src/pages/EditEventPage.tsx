@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { useEvents } from "../context/useEvents";
+import { useEvents } from "../context/EventsContext";
 import { findEventById } from "../utils/filter-events";
 import EventForm from "../components/forms/EventForm";
 import NotFoundPage from "./NotFoundPage";
@@ -16,10 +16,10 @@ function EditEventPage() {
     <>
       <h2 className="bolum-baslik">Etkinlik Güncelle</h2>
       <EventForm
-        initialValues={{ ...event, capacity: String(event.capacity) }}
+        initialData={{ ...event, capacity: String(event.capacity) }}
         submitText="Güncelle"
-        onSubmit={(values) => {
-          updateEvent(event.id, values);
+        onSubmit={(data) => {
+          updateEvent(event.id, data);
           navigate("/admin");
         }}
       />

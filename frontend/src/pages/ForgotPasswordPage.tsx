@@ -1,21 +1,20 @@
 import { useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
-import { isEmail } from "../utils/validate";
-
 function ForgotPasswordPage() {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [sent, setSent] = useState(false);
 
-  function handleSubmit(e: FormEvent) {
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const found = isEmail(email) ? "" : "Geçerli bir e-posta girin.";
+    const found = email.includes("@") ? "" : "Geçerli bir e-posta girin.";
     setError(found);
     setSent(found === "");
   }
 
   return (
     <>
+      <h2 className="bolum-baslik">Şifremi Unuttum</h2>
       <p>Kayıtlı e-posta adresinizi yazın, şifre yenileme bağlantısı gönderelim.</p>
       {sent && <p className="mesaj mesaj-basari">Bağlantı {email} adresine gönderildi (demo).</p>}
 
