@@ -35,7 +35,7 @@ export const events = [
     category: "Atölye",
     date: "2026-11-03",
     time: "15:00",
-    location: "Bilgisayar Laboratuvarı 3",
+    location: "Bilgisayar Laboratuvarı",
     description: "Temel komutlar, dosya izinleri ve küçük kabuk betikleri.",
     capacity: 30
   },
@@ -45,7 +45,7 @@ export const events = [
     category: "Yarışma",
     date: "2026-11-10",
     time: "09:30",
-    location: "Merkez Kütüphane Zemin Kat",
+    location: "Doğu Kampüs Kütüphanesi",
     description: "Takımlar sekiz saatte kampüs hayatını kolaylaştıran bir uygulama çıkarıyor.",
     capacity: 10
   },
@@ -55,7 +55,7 @@ export const events = [
     category: "Seminer",
     date: "2026-11-17",
     time: "14:30",
-    location: "İktisat Fakültesi Amfi 2",
+    location: "Mühendislik Fakültesi Amfi 2",
     description: "Gerçek bir veri setiyle temizleme, görselleştirme ve ilk tahmin modeli.",
     capacity: 50
   }
