@@ -1,6 +1,5 @@
-export const events = [
+export const seedEvents = [
   {
-    id: "event-1",
     title: "Girişimcilik Zirvesi",
     category: "Seminer",
     date: "2026-10-12",
@@ -10,7 +9,6 @@ export const events = [
     capacity: 100
   },
   {
-    id: "event-2",
     title: "Drone Yapım Atölyesi",
     category: "Atölye",
     date: "2026-10-20",
@@ -20,7 +18,6 @@ export const events = [
     capacity: 20
   },
   {
-    id: "event-3",
     title: "Oyun Geliştirme Söyleşisi",
     category: "Söyleşi",
     date: "2026-10-27",
@@ -30,7 +27,6 @@ export const events = [
     capacity: 50
   },
   {
-    id: "event-4",
     title: "Linux Terminal Atölyesi",
     category: "Atölye",
     date: "2026-11-03",
@@ -40,7 +36,6 @@ export const events = [
     capacity: 30
   },
   {
-    id: "event-5",
     title: "Mobil Uygulama Hackathonu",
     category: "Yarışma",
     date: "2026-11-10",
@@ -50,7 +45,6 @@ export const events = [
     capacity: 10
   },
   {
-    id: "event-6",
     title: "Veri Bilimine Giriş Semineri",
     category: "Seminer",
     date: "2026-11-17",
