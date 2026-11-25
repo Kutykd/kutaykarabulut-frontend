@@ -21,10 +21,15 @@ Adres: http://localhost:3000
 
 | Method | Endpoint | Amaç | Başarılı | Hata | Durum |
 |---|---|---|---|---|---|
-| GET | /events | Listeyi getir | 200 | — | Bu sprint |
-| GET | /events/:id | Tek etkinlik | 200 | 404 (geçersiz id de) | Bu sprint |
-| POST | /events | Yeni etkinlik | 201 | 400 | Bu sprint |
-| PATCH | /events/:id | Güncelle | 200 | 400, 404 | Sprint 9 |
-| DELETE | /events/:id | Sil | 204 | 404 | Sprint 9 |
+| GET | /health | Sunucu durumu | 200 | — | çalışıyor |
+| GET | /events | Listeyi getir | 200 | — | çalışıyor |
+| GET | /events?search=&category= | Başlıkta ara, kategoriye göre süz | 200 | — | çalışıyor |
+| GET | /events/upcoming | Bugün ve sonrası, tarihe göre sıralı | 200 | — | çalışıyor |
+| GET | /events/:id | Tek etkinlik | 200 | 404 (geçersiz id de) | çalışıyor |
+| POST | /events | Yeni etkinlik | 201 | 400 | çalışıyor |
+| PATCH | /events/:id | Güncelle | 200 | 400, 404 | çalışıyor |
+| DELETE | /events/:id | Sil | 204 | 404 | çalışıyor |
 
 Hata biçimi: `{ "error": { "message": "Event not found" } }`
+
+Tarih her yerde `GG-AA-YYYY` biçiminde: `"15-10-2026"`. Veritabanında Date olarak tutulur.
