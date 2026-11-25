@@ -2,7 +2,7 @@ export const seedEvents = [
   {
     title: "Girişimcilik Zirvesi",
     category: "Seminer",
-    date: "2026-10-12",
+    date: "12-10-2026",
     time: "14:00",
     location: "Rektörlük Kongre Salonu",
     description: "Öğrenci girişimcileri ilk yatırım deneyimlerini anlatıyor.",
@@ -11,7 +11,7 @@ export const seedEvents = [
   {
     title: "Drone Yapım Atölyesi",
     category: "Atölye",
-    date: "2026-10-20",
+    date: "20-10-2026",
     time: "10:00",
     location: "Mühendislik Fakültesi Elektronik Lab",
     description: "Hazır kitle küçük bir drone kurup ilk uçuşu birlikte yapıyoruz.",
@@ -20,7 +20,7 @@ export const seedEvents = [
   {
     title: "Oyun Geliştirme Söyleşisi",
     category: "Söyleşi",
-    date: "2026-10-27",
+    date: "02-12-2026",
     time: "13:00",
     location: "C Blok Seminer Odası",
     description: "Bağımsız bir oyun stüdyosunun kurucusuyla sektör üzerine sohbet.",
@@ -29,7 +29,7 @@ export const seedEvents = [
   {
     title: "Linux Terminal Atölyesi",
     category: "Atölye",
-    date: "2026-11-03",
+    date: "09-12-2026",
     time: "15:00",
     location: "Bilgisayar Laboratuvarı",
     description: "Temel komutlar, dosya izinleri ve küçük kabuk betikleri.",
@@ -38,7 +38,7 @@ export const seedEvents = [
   {
     title: "Mobil Uygulama Hackathonu",
     category: "Yarışma",
-    date: "2026-11-10",
+    date: "16-12-2026",
     time: "09:30",
     location: "Doğu Kampüs Kütüphanesi",
     description: "Takımlar sekiz saatte kampüs hayatını kolaylaştıran bir uygulama çıkarıyor.",
@@ -47,7 +47,7 @@ export const seedEvents = [
   {
     title: "Veri Bilimine Giriş Semineri",
     category: "Seminer",
-    date: "2026-11-17",
+    date: "23-12-2026",
     time: "14:30",
     location: "Mühendislik Fakültesi Amfi 2",
     description: "Gerçek bir veri setiyle temizleme, görselleştirme ve ilk tahmin modeli.",
